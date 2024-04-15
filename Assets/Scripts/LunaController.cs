@@ -9,8 +9,9 @@ public class LunaController : MonoBehaviour//继承monobehaviour实现基本的�
     void Start()//游戏开始调用
     {
         //Application.targetFrameRate = 30;//帧率修改为10
-        rigidbody2d = GetComponent<Rigidbody2D>();
-
+        rigidbody2d = GetComponent<Rigidbody2D>();//定义一个容器获取右边的值，getcomponent是获取组件，填名字或类型
+        //含义是调用方法的
+        
     }
 
     // Update is called once per frame
@@ -22,9 +23,9 @@ public class LunaController : MonoBehaviour//继承monobehaviour实现基本的�
         float vertical = Input.GetAxis("Vertical");
         //移动一般放在update中
         Vector2 pos = transform.position;
-        pos.x = pos.x + 3*horizontal*Time.deltaTime;
-        pos.y = pos.y + 3 * vertical*Time.deltaTime;
-        transform.position = pos;
+        pos.x = pos.x + 30f * horizontal*Time.deltaTime;
+        pos.y = pos.y + 30f * vertical*Time.deltaTime;
+        // transform.position = pos;
         rigidbody2d.MovePosition(pos);
     }
 }
