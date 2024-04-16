@@ -16,9 +16,10 @@ public class LunaController : MonoBehaviour//继承monobehaviour实现基本的�
         
     }
 
+   
     // Update is called once per frame
     void Update()//游戏每一帧都会调用
-    {
+    { 
         //获取玩家水平轴输入值
         float horizontal = Input.GetAxis("Horizontal");
         //获取玩家垂直轴向输入值
